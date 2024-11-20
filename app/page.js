@@ -40,7 +40,7 @@ export default function Membership() {
     <div>
       <h1>Check Membership Status</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor='employeeId'>Enter Employee ID:</label>
+        <label htmlFor='employeeId'>Enter Membership ID:</label>
         <input
           type='text'
           id='employeeId'
@@ -48,17 +48,17 @@ export default function Membership() {
           onChange={(e) => setEmployeeId(e.target.value)}
           required
         />
-        <button type='submit'>Check Status</button>
+        <button type='submit'>Check Membership Status</button>
       </form>
 
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {data && (
         <div>
-          <h2>Employee: {data.name}</h2>
-          <p>Renewal Date: {data.renewalDate}</p>
-          <p>Days to Renewal: {data.daysToRenewal}</p>
-          <p>Status: {data.membershipStatus}</p>
+          <h2>Member Name: {data.name}</h2>
+          <p>Mambership Renewal Date: {data.renewalDate}</p>
+          <p>Mambership Days to Renewal: {data.daysToRenewal}</p>
+          <p>Mambership Status: {data.membershipStatus}</p>
         </div>
       )}
     </div>
